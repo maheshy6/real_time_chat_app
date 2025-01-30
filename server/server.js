@@ -1,11 +1,11 @@
-const express = require('express'); // Web framework
+const express = require('express'); 
 const http = require('http');      // Create HTTP server
 const { Server } = require('socket.io'); // Import Socket.io
-
+require('dotenv').config()
 const app = express();
 const server = http.createServer(app);
 const io = new Server(server);
-
+const PORT = process.env.PORT || 5000
 let users = {}; // Store online users
 
 // Serve static files for the client
@@ -44,6 +44,6 @@ io.on('connection', (socket) => {
 });
 
 // Start the server
-server.listen(3000, () => {
-    console.log('Server running at http://localhost:3000');
+server.listen(PORT, () => {
+    console.log(`Server running at http://localhost:${PORT}`);
 });
