@@ -18,10 +18,11 @@ loginButton.addEventListener('click', () => {
     username = usernameInput.value.trim();
     if (username) {
         socket.emit('login', username);
-        loginContainer.classList.add('hidden');
-        chatContainer.classList.remove('hidden');
+        loginContainer.classList.add('hidden'); // Hide login container
+        chatContainer.classList.remove('hidden'); // Show chat container
     }
 });
+
 
 // Send message
 sendButton.addEventListener('click', () => {
