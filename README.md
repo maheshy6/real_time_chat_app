@@ -1,5 +1,5 @@
 # real_time_chat_app
-A simple web-based chat application inspired by WhatsApp's design. Users can log in with a username and send messages in a chatroom.
+A simple chat application inspired by WhatsApp's design. Users can log in with a username and send messages in a chatroom.
 
 ## Features
 - User login system
